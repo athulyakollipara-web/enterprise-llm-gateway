@@ -1,0 +1,9 @@
+{
+  "_note": "Aliases teams call, mapped to Bedrock model IDs. Prices are USD per 1M tokens (on-demand, US regions) and are examples: check the Bedrock pricing page for your region and update. Changing a model ID here upgrades every team without any code change on their side.",
+  "models": {
+    "claude-sonnet": {"model_id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0", "input_per_m": 3.00, "output_per_m": 15.00, "fallback": ["nova-pro"]},
+    "claude-haiku":  {"model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",  "input_per_m": 1.00, "output_per_m": 5.00,  "fallback": ["nova-lite"]},
+    "nova-pro":      {"model_id": "us.amazon.nova-pro-v1:0",  "input_per_m": 0.80, "output_per_m": 3.20, "fallback": ["claude-haiku"]},
+    "nova-lite":     {"model_id": "us.amazon.nova-lite-v1:0", "input_per_m": 0.06, "output_per_m": 0.24, "fallback": ["claude-haiku"]}
+  }
+}

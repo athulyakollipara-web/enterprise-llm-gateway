@@ -1,0 +1,77 @@
+{
+  "environment": {
+    "python": "3.13.18",
+    "machine": "x86_64",
+    "state": "sqlite (local)",
+    "model": "mock, 0 ms unless noted"
+  },
+  "overhead_single_client": {
+    "requests": 500,
+    "concurrency": 1,
+    "ok": 500,
+    "throughput_rps": 299.3,
+    "client_latency_ms": {
+      "p50": 3.13,
+      "p95": 4.5,
+      "p99": 9.27
+    },
+    "gateway_processing_ms": {
+      "p50": 0.24,
+      "p95": 0.32,
+      "p99": 0.88
+    }
+  },
+  "overhead": {
+    "requests": 2000,
+    "concurrency": 16,
+    "ok": 2000,
+    "throughput_rps": 250.2,
+    "client_latency_ms": {
+      "p50": 62.23,
+      "p95": 78.37,
+      "p99": 95.91
+    },
+    "gateway_processing_ms": {
+      "p50": 36.13,
+      "p95": 49.1,
+      "p99": 62.25
+    }
+  },
+  "failures": {
+    "requests": 2000,
+    "model_failure_rate": 0.1,
+    "direct_call_success": 0.9,
+    "gateway_success": 0.999,
+    "served_by_fallback": 0.013,
+    "model_calls_per_request": 1.107
+  },
+  "outage": {
+    "requests": 1000,
+    "direct_call_success": 0.0,
+    "gateway_success": 1.0,
+    "model_calls_per_request_with_breaker": 1.005,
+    "model_calls_per_request_without_breaker": 3.0
+  },
+  "budget": {
+    "post_charge": {
+      "budget_usd": 0.02,
+      "requests_served": 35,
+      "spent_usd": 0.023205,
+      "overspend_pct": 16.0
+    },
+    "reserve": {
+      "budget_usd": 0.02,
+      "requests_served": 26,
+      "spent_usd": 0.017238,
+      "overspend_pct": 0.0
+    }
+  },
+  "cache": {
+    "requests": 2000,
+    "cache_hit_rate": 0.3985,
+    "model_calls": 1203,
+    "cost_usd": 0.284719,
+    "cost_without_cache_usd_est": 0.473348,
+    "cost_saved_pct": 39.8
+  }
+}

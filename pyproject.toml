@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enterprise-llm-gateway"
+version = "0.1.0"
+description = "One governed door from every internal team to Amazon Bedrock: auth, budgets, rate limits, PII pseudonymization, caching, fallback and audit."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Athulya Kollipara"}]
+dependencies = ["fastapi>=0.110", "uvicorn>=0.29", "boto3>=1.35", "pyjwt[crypto]>=2.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+infra = ["aws-cdk-lib>=2.150", "constructs>=10"]
+
+[project.scripts]
+llmgw = "llmgw.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["llmgw*"]
+
+[tool.setuptools.package-data]
+llmgw = ["models.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,211 @@
+{
+  "prompts": 600,
+  "pii_values": 880,
+  "recall": 0.9034,
+  "precision": 0.99,
+  "recall_on_supported_formats": 1.0,
+  "values_reaching_model": 85,
+  "leak_rate": 0.0966,
+  "leaks_by_format": {
+    "BANK_ACCOUNT_NUMBER:unlabeled": 30,
+    "SSN:bare9": 30,
+    "PHONE:bare10": 25
+  },
+  "per_type": {
+    "AWS_ACCESS_KEY": {
+      "total": 111,
+      "recall": 1.0
+    },
+    "BANK_ACCOUNT_NUMBER": {
+      "total": 124,
+      "recall": 0.758
+    },
+    "BANK_ROUTING": {
+      "total": 101,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER": {
+      "total": 110,
+      "recall": 1.0
+    },
+    "EMAIL": {
+      "total": 109,
+      "recall": 1.0
+    },
+    "IP_ADDRESS": {
+      "total": 101,
+      "recall": 1.0
+    },
+    "PHONE": {
+      "total": 107,
+      "recall": 0.766
+    },
+    "SSN": {
+      "total": 117,
+      "recall": 0.744
+    }
+  },
+  "per_format": {
+    "AWS_ACCESS_KEY:access_key": {
+      "total": 111,
+      "recall": 1.0
+    },
+    "BANK_ACCOUNT_NUMBER:ending_in": {
+      "total": 36,
+      "recall": 1.0
+    },
+    "BANK_ACCOUNT_NUMBER:labeled": {
+      "total": 58,
+      "recall": 1.0
+    },
+    "BANK_ACCOUNT_NUMBER:unlabeled": {
+      "total": 30,
+      "recall": 0.0
+    },
+    "BANK_ROUTING:labeled": {
+      "total": 101,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:amex_dash": {
+      "total": 8,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:amex_plain": {
+      "total": 9,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:amex_space": {
+      "total": 8,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:discover_dash": {
+      "total": 9,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:discover_plain": {
+      "total": 6,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:discover_space": {
+      "total": 9,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:mc_dash": {
+      "total": 9,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:mc_plain": {
+      "total": 9,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:mc_space": {
+      "total": 12,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:visa_dash": {
+      "total": 15,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:visa_plain": {
+      "total": 9,
+      "recall": 1.0
+    },
+    "CREDIT_DEBIT_NUMBER:visa_space": {
+      "total": 7,
+      "recall": 1.0
+    },
+    "EMAIL:standard": {
+      "total": 109,
+      "recall": 1.0
+    },
+    "IP_ADDRESS:ipv4": {
+      "total": 101,
+      "recall": 1.0
+    },
+    "PHONE:bare10": {
+      "total": 25,
+      "recall": 0.0
+    },
+    "PHONE:dash": {
+      "total": 10,
+      "recall": 1.0
+    },
+    "PHONE:dot": {
+      "total": 10,
+      "recall": 1.0
+    },
+    "PHONE:intl_compact": {
+      "total": 11,
+      "recall": 1.0
+    },
+    "PHONE:intl_space": {
+      "total": 18,
+      "recall": 1.0
+    },
+    "PHONE:paren": {
+      "total": 11,
+      "recall": 1.0
+    },
+    "PHONE:space": {
+      "total": 22,
+      "recall": 1.0
+    },
+    "SSN:bare9": {
+      "total": 30,
+      "recall": 0.0
+    },
+    "SSN:dashed": {
+      "total": 57,
+      "recall": 1.0
+    },
+    "SSN:labeled_plain": {
+      "total": 30,
+      "recall": 1.0
+    }
+  },
+  "false_positives": {
+    "CREDIT_DEBIT_NUMBER": 8
+  },
+  "false_positive_examples": [
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4523105443446759",
+      "text": "Draft a reply. Reference 4523105443446759 is an internal batch id. Branch zip code 27058."
+    },
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4515763582339548",
+      "text": "Draft a reply. Reference 4515763582339548 is an internal batch id. Order ORD-16666 shipped on 2026-08-25. Flag sessions from 168.83.152.222."
+    },
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4650565473341284",
+      "text": "Draft a reply. Someone pasted AKIAZS3PXJYC6WGHJPQ4 into the ticket. Flag sessions from 23.41.203.239. Ticket #96757 mentions a fee of 41 dollars. Reference 4650565473341284 is an internal batch id."
+    },
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4254513294597270",
+      "text": "Draft a reply. Reference 4254513294597270 is an internal batch id. Ticket #22131 mentions a fee of 15 dollars."
+    },
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4857710776105249",
+      "text": "Draft a reply. Branch zip code 78606. Reference 4857710776105249 is an internal batch id. Customer emailed from priyachen43@corp-example.net yesterday."
+    },
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4525798076614871",
+      "text": "Draft a reply. Someone pasted AKIATW2P6EA2HHUXMJCM into the ticket. Login came from 173.107.158.155. Reference 4525798076614871 is an internal batch id. Total due is $4,754.33 by Friday."
+    },
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4094662173500949",
+      "text": "Draft a reply. Flag sessions from 117.51.93.160. Reference 4094662173500949 is an internal batch id. Reference 4257973259101359 is an internal batch id. A/C 680340319176 needs review."
+    },
+    {
+      "type": "CREDIT_DEBIT_NUMBER",
+      "value": "4449416735743824",
+      "text": "Draft a reply. Account number 30062903 shows a hold. Login came from 233.201.155.234. Reference 4449416735743824 is an internal batch id. Card 3758-979966-54667 was declined at checkout."
+    }
+  ]
+}
