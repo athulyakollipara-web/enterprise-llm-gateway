@@ -1,0 +1,10 @@
+.git
+.venv
+venv
+cdk.out
+infra/cdk.out
+eval/results
+**/__pycache__
+*.egg-info
+dist
+build
